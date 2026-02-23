@@ -1,17 +1,18 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
 {
-	int n = 5;
+	const int n = 5;
 
-	int arr[5] = {};
+	string arr[n];
 
-	cout << "Enter " << n << "numbers: " << endl;
+	cout << "Enter " << n << "fruits: " << endl;
 	for (int i = 0; i < n; i++)
 	{
-		cout << "Enter number " << i + 1 << ": ";
-		cin >> arr[i];
+		cout << "Enter fruit " << i + 1 << ": ";
+		getline(cin, arr[i]);
 	}
 	cout << endl;
 
@@ -22,9 +23,9 @@ int main()
 	}
 	cout << endl;
 
-	int temp;
+	string temp;
 
-	for (int i = 0; i < n - 1 ; i++)
+	for (int i = 0; i < n - 1; i++)
 	{
 		for (int j = i + 1; j < n; j++)
 		{
